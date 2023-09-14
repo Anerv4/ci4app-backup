@@ -1,0 +1,100 @@
+
+
+.sampul{
+    width: 70px;
+}
+
+.table > tbody > tr > *{
+    vertical-align: middle;
+}
+body{
+    margin:0;
+    padding:0;
+    /* background-color: linear-gradient(#4a4849,#0d2847); */
+    background:linear-gradient(#4a4849,#50577A,#4a4849);
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    height: 100vh;
+}
+.navbar{
+    background-color: #384766;
+    /* vertical-align: top; */
+    /* display: block; */
+}
+.collapse .nav-item .nav-link{
+    color: #ffdf3f;
+    
+}
+
+.navbar-brand h5{
+    background: linear-gradient(45deg, #ffcc00, #ff0c5a);
+    background-size: 400% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 5s linear infinite;
+}
+@keyframes gradient {
+    0%, 100%{
+        background-position: 0% 50%;
+        text-shadow: 0 0 12px #ffcc00 ;
+    }
+    50%{
+        background-position: 100% 50%;
+        text-shadow: 0 0 7px #ff0c5a ;
+
+    }
+}
+.navbar-brand:hover{
+    color: rgb(151, 137, 98);
+}
+table{
+    background-color: #f4e4cb;
+}
+thead{
+    background-color: #384766;
+    color: #ffdf3f;
+}
+/* bagian Detail */
+.detail{
+    justify-content: center;
+    text-align:center;
+    background-size: 400% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shadow 2s linear infinite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+@keyframes shadow{
+    0%{
+        rotate: 0%;
+        /* background-position: 0% 50%; */
+        text-shadow: 0 0 12px #ffffff ;
+    }
+    50%{
+        rotate: 180%;
+        /* background-position: 100% 50%; */
+        text-shadow: 0 0 12px lightyellow ;
+
+    }
+    100%{
+      rotate:360%;
+      text-shadow: 0 0 12px #ffffff;
+    }
+}
+#card.card{
+    /* display: inline-block; */
+    justify-content: center;
+    align-items: center;
+    /* overflow:hidden; */
+    height: auto;
+}
+.paginate{
+    /* display: block; */
+    /* border : 1px  dotted black; */
+    width: 100%;
+}
+.paginate .kanan{
+    float:right;
+}

@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  border: 2px solid black;
+  background: rgb(243, 231, 172);
+}
+.container {
+  /* border: 2px solid black; */
+}
+.row {
+  /* border: 2px solid black; */
+}
+.col {
+  border: 2px solid black;
+}
+/* Slider */
+.sliderbar {
+  /* border: 2px solid blue; */
+}
+.carousel-item {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 500px;
+}
+.poster1 {
+  width: 100%;
+  height: 100%;
+}
+.poster2 {
+  width: 100%;
+  height: 100%;
+}
+.poster3 {
+  width: 100%;
+  height: 100%;
+}
+/* Media Query */
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+/* @media (max-width: 576px) {
+    .carousel-item{height: 30%;}
+} */
+
+@media (max-width: 576px) {
+  .carousel-item {
+    height: 180px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .carousel-item {
+    height: 220px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .carousel-item {
+    height: 380px;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .carousel-item {
+    height: 420px;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .carousel-item {
+    height: 500px;
+  }
+}
+/*  */
+/* Media Query Card */
+/*  */
+
+/* Card */
+.populerKomik {
+  /* border: 2px solid magenta; */
+  width: 100%;
+  background-image: linear-gradient(
+    5deg,
+    hsl(0deg 0% 100%) 0%,
+    hsl(54deg 9% 97%) 13%,
+    hsl(54deg 9% 94%) 28%,
+    hsl(54deg 9% 91%) 43%,
+    hsl(55deg 9% 88%) 58%,
+    hsl(55deg 9% 85%) 70%,
+    hsl(55deg 9% 82%) 81%,
+    hsl(55deg 9% 79%) 89%,
+    hsl(55deg 9% 77%) 95%,
+    hsl(55deg 9% 74%) 100%
+  );
+  box-shadow: 0 0 12px 0 black;
+  /* margin-bottom: 20px; */
+  /* height: 500px; */
+}
+.container-card {
+  border: 2px solid green;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 500px;
+}
+.card {
+  /* border: 2px solid red; */
+  /* height: 100%; */
+  width: 17rem;
+  margin: 0 0 0 12px;
+  border: 1px solid black;
+}
+.container-card .card img {
+  width: 100%;
+  height: 400px;
+  /* border: 2px solid cyan; */
+}
+.container-card .card .card-body {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  transition: 0.3s;
+  /* border: 2px solid pink; */
+}
+.container-card .card .card-body::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 92% 0 0 0;
+  /* inset: atas kanan bawah kiri => menghilangkan daerah putih untuk diganti warna yang diinginkan */
+  background: #384766;
+  transition: 1s;
+  border-radius: 3px;
+}
+.container-card .card .card-body:hover {
+  color: white;
+}
+.container-card .card .card-body:hover::after {
+  inset: 0 0 0 0;
+}
+.container-card .card {
+  transition: 0.5s;
+}
+.container-card .card:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* Kumpulan Judul Judul */
+.judulPopuler {
+  display: block;
+  /* border: 2px solid red; */
+}
+.judulPopuler p {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  justify-content: center;
+  font-size: 35px;
+  /* background: linear-gradient(60deg, #ff0000, #ff8000); */
+  background: rgb(0, 0, 0);
+  background-size: 400% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: cahaya 5s linear infinite;
+}
+@keyframes cahaya {
+  0%,
+  100% {
+    background-position: 0% 50%;
+    text-shadow: 0 0 12px #ff0000;
+  }
+  75% {
+    background-position: 100% 100%;
+    text-shadow: 0 0 12px #fd4343;
+  }
+  50% {
+    background-position: 100% 50%;
+    text-shadow: 0 0 7px #a40707;
+  }
+  /* 0%{
+        background-position: 0% 10%;
+        text-shadow: 0 0 5px #DF2E38 ;
+        
+    }
+    10%{
+        background-position: 0% 20%;
+        text-shadow: 0 2 10px #EB455F;
+    }
+    20%{
+        background-position:0% 35%;
+        text-shadow: 0 5 12px #E90064;
+    }
+    30%{
+        background-position: 0% 45%;
+        text-shadow: 0 10 15px #E0144C;
+    }
+    40%{
+        background-position: 0% 60%;
+        text-shadow: 0 15 20px #CF0A0A ;
+
+    }
+    50%{
+        background-position: 0% 70%;
+        text-shadow: 0 15 30px #8d0606 ;
+
+    }
+    60%{
+        background-position: 0% 80%;
+        text-shadow: 0 20 50px #630404 ;
+
+    }
+    70%{
+        background-position: 0% 100%;
+        text-shadow: 0 30 70px #E21818 ;
+
+    }
+    80%{
+        background-position: 0% 80%;
+        text-shadow: 0 20 50px #E0144C ;
+
+    }
+    90%{
+        background-position: 0% 80%;
+        text-shadow: 0 20 50px #E90064 ;
+
+    }
+    100%{
+        background-position: 100% 100%;
+        text-shadow: 0 0 100px red ;
+
+    } */
+}
+.judulPopuler p i {
+  background: rgb(255, 91, 31);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+/* Navbar */
+.navbar {
+  background-color: #384766;
+}
+.collapse .nav-item .nav-link {
+  color: #ffdf3f;
+}
+.navbar-brand h5 {
+  background: linear-gradient(45deg, #ffcc00, #ff0c5a);
+  background-size: 400% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s linear infinite;
+}
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+    text-shadow: 0 0 12px #ffcc00;
+  }
+  50% {
+    background-position: 100% 50%;
+    text-shadow: 0 0 7px #ff0c5a;
+  }
+}
+/* Tabel */
+.container-tabel .row .col {
+  border: 2px solid red;
+}
+.sampul {
+  width: 70px;
+}
+.table > tbody > tr > * {
+  vertical-align: middle;
+}
+table {
+  background-color: #fbfbfb;
+}
+thead {
+  background-color: grey;
+  /* color: #ffdf3f; */
+}
+/** Paginasi/Paginate */
+.paginate{
+  /* display: block; */
+  /* border : 1px  dotted black; */
+  width: 100%;
+}
+.paginate .kanan{
+  float:right;
+}
